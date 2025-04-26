@@ -3,26 +3,34 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: "Task Manager App",
-    description: "A full-stack task management app built with the MERN stack. Includes CRUD operations, filtering, and dark mode.",
-    link: "#", // Replace with real link later (GitHub or live demo)
-  },
-  {
-    title: "Portfolio Website",
-    description: "This very portfolio site! Built with React, Tailwind, and Framer Motion to showcase my projects.",
+    description: "A full-stack task app built with the MERN stack. Includes task filtering, editing, and dark mode support.",
     link: "#",
   },
   {
-    title: "Weather App",
-    description: "A simple weather dashboard using OpenWeatherMap API. Built with vanilla JS and Tailwind.",
+    title: "Portfolio Website",
+    description: "My personal portfolio, built with React, TailwindCSS, and Framer Motion. You're looking at it!",
+    link: "#",
+  },
+  {
+    title: "Weather Dashboard",
+    description: "A clean weather app using the OpenWeather API. Displays location-based forecasts with animated transitions.",
     link: "#",
   },
 ];
 
 function Projects() {
   return (
-    <section id="projects" className="min-h-screen bg-gray-100 px-6 py-20 text-gray-900">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">Projects</h2>
+    <section id="projects" className="min-h-screen px-6 py-20 text-gray-900">
+      <div className="max-w-6xl mx-auto text-center md:text-left">
+        {/* Title with line */}
+        <div className="flex items-center gap-4 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-black whitespace-nowrap leading-none">
+            <span className="text-cyan-500">/</span> projects
+          </h2>
+          <div className="flex-grow h-px bg-cyan-500 mt-1"></div>
+        </div>
+
+        {/* Project cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -34,7 +42,7 @@ function Projects() {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-              <p className="mb-4">{project.description}</p>
+              <p className="mb-4 text-gray-700">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"
