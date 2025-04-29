@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaReact, FaNode, FaGithub, FaExternalLinkAlt, FaHtml5, FaCss3Alt, FaJs, FaPython,} from 'react-icons/fa';
+import { FaReact, FaNode, FaGithub, FaExternalLinkAlt, FaHtml5, FaCss3Alt, FaJs, FaPython, FaCode} from 'react-icons/fa';
 import { SiMongodb, SiTailwindcss, SiFramer } from 'react-icons/si';
 
 const techIcons = {
@@ -11,13 +11,14 @@ const techIcons = {
   HTML5: <FaHtml5 className="text-orange-600" />,
   CSS3: <FaCss3Alt className="text-blue-500" />,
   JavaScript: <FaJs className="text-yellow-400" />,
-  Python: <FaPython className="text-blue-400" />,  //       
+  Python: <FaPython className="text-blue-400" />, 
+  Cpp: <FaCode className="text-gray-400" />,   
 }
 
 const projects = [
   {
     title: "Task Manager App",
-    description: "A full-stack task manager built with the MERN stack, including task filtering, editing, and a responsive UI.",
+    description: "Developed a full-stack task and goal management application using the MERN stack (MongoDB, Express.js, React.js, Node.js) to streamline personal productivity. The app enables users to create, edit, delete, and track tasks in an intuitive interface, with a focus on responsive design, performance optimization, and scalable architecture.A full-stack task manager built with the MERN stack, including task filtering, editing, and a responsive UI.",
     github: "https://github.com/Doger87/Full-Stack-Task-Goal-Management-App",
     live: "https://task-manager-frontend-sable-beta.vercel.app/",
     images: [
@@ -28,7 +29,7 @@ const projects = [
   },
   {
     title: "Portfolio Website",
-    description: "This is my personal portfolio website built with React and TailwindCSS.",
+    description: "Designed and developed a personal portfolio website to showcase professional projects, technical skills, and academic achievements. The website is a single-page application (SPA) built with modern web development tools, highlighting responsive design, smooth navigation, and interactive elements.This is my personal portfolio website built with React and TailwindCSS.",
     github: "https://github.com/Doger87/my-portfolio",
     live: "https://davidsanchez.vercel.app/",
     images: [
@@ -37,8 +38,17 @@ const projects = [
     tech: ["JavaScript", "React", "TailwindCSS", "Framer Motion"],
   },
   {
+    title: "PathFinder",
+    description: "PathFinder is a C++ application that implements a Graph Abstract Data Type (ADT) to model a set of interconnected vertices and edges. It supports operations such as adding nodes, adding edges, and computing shortest paths between vertices using algorithms like Breadth-First Search (BFS) and Dijkstra's Algorithm. Designed with modularity in mind, the project uses dynamic memory management, classes, and standard containers to efficiently store and traverse large graphs.",
+    github: "https://github.com/Doger87/graphs-project",
+    images: [
+      "/assets/Graphs-project-preview.png",
+    ],
+    tech: ["Cpp"],
+  },
+  {
     title: "Weather Dashboard",
-    description: "A real-time weather dashboard using OpenWeather API. Shows temperature, humidity, and weather conditions for any city.",
+    description: "Created a Python-powered interactive data dashboard for real-time data exploration and visualization. The dashboard allows users to filter, sort, and analyze datasets dynamically without writing code, making it an excellent tool for business insights, academic research, or technical demonstrations.",
     github: "https://github.com/Doger87/simple-weather-dashboard",
     live: "https://your-weather-dashboard-link.vercel.app/",
     images: [
